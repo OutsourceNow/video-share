@@ -1,2 +1,2 @@
 # video-share
-A react nestjs video libraly app. 
+A react nestjs video library app. 

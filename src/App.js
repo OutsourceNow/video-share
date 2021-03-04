@@ -1,29 +1,23 @@
 import React from 'react'
 import './App.css';
-import { Login, Register } from './components/login';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import { Login, Register, Reset } from './components/login';
 
 
-class App extends React.Component{
+function App() {
+  return(
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/" exact component={Login} />
+          <Route path="/Register" component={Register} />
+          <Route path="/Reset" component={Reset} />
 
-  constructor(props){
-    super(props);
-    this.state ={
-      isLogginActive: true,
-    }
-  }
-    render() {
-      const {isLogginActive} = this.state;
-      return(
-        <div className="App">
-          <div className="Login">
-            <div className="container">
-              {isLogginActive && <Login containerRef={(ref) => this.current = ref}/>}
-              {!isLogginActive && <Register containerRef={(ref) => this.current = ref}/>}
-            </div>
-          </div>
-        </div>
-      );
-    }
-  }
+        </Switch>
+      </div>
+    </Router>
+  )
+  
+}
 
 export default App;

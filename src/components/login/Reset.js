@@ -4,59 +4,48 @@ import welcomeImg from "../../welcome.svg";
 import placeImg from "../../placeholder.svg";
 import {Link} from 'react-router-dom';
 
-export class Register extends React.Component {
-   
+export class Reset extends React.Component {
+
 
     render(){
         return(
         <div className="base-container" ref={this.props.containerRef}>
-
             <div className="contentback">
                 <div className="content">
 
                      <div className="imageLogo">
-                         <img src={loginImg} alt=""/>
+                         <img src={loginImg} alt="" />
                     </div>
                     
                     <div className="imageWelcome">
-                        <img src={welcomeImg} alt=""/>
+                        <img src={welcomeImg} alt="" />
                     </div>
                     
                     <div className="form">
-                        
                         <div className="form-group">
-                            <label htmlFor="username">Username</label>
+                            <label htmlFor="username">Username:</label>
                             <input type="text" name="username" placeholder="username"/>
                         </div>
-
-                        <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input type="text" name="email" placeholder="email"/>
-                        </div>
-
-                        <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="text" name="password" placeholder="password"/>
-                        </div>
-
 
                     </div>
 
                 </div>
-
-                <div className="footer">
-                    <button type="button" className="btnSignUp">SignUp</button>
-                    <Link to="/">
-                        <button type="button" className="btnBackToLogin">Already a User</button>
-                    </Link>
-                </div>
                 
+                <div className="footer">
+                    <button type="button" className="btnResetPassword">Reset Password</button>
+
+                </div>
+
+                <Link to="/">
+                        <button type="button" className="btnReurnToLogin">Return to login</button>
+                </Link>
+
                 <div className="imagePlaceholder">
                     <img src={placeImg} alt=""/>
                 </div>
 
             </div>
-         
+            
         </div>
         );
     }

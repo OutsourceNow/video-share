@@ -2,9 +2,10 @@ import React from 'react';
 import loginImg from "../../showroom.svg";
 import welcomeImg from "../../welcome.svg";
 import placeImg from "../../placeholder.svg";
-
+import {Link} from 'react-router-dom';
 
 export class Login extends React.Component {
+
 
     render(){
         return(
@@ -39,11 +40,15 @@ export class Login extends React.Component {
                 <div className="footer">
                     <button type="button" className="btnLogin">login</button>
 
-                    <button type="button" className="btnResetPassword">Reset Password</button>
+                    <Link to="/Reset" className="btnRegisterLink">
+                        <button type="button" className="btnForgotPassword">Forgot Password</button>
+                    </Link>
                 </div>
 
-                <button type="button" className="btnRegister">Register</button>
-                
+                <Link to="/Register" className="btnRegisterLink">
+                    <button type="button" className="btnRegister">Register</button>
+                </Link>
+
                 <div className="imagePlaceholder">
                     <img src={placeImg} alt=""/>
                 </div>

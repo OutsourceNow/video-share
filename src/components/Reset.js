@@ -23,8 +23,8 @@ export default function Reset() {
                     
                     <div className="form">
                         <div className="form-group">
-                            <label htmlFor="username">Username:</label>
-                            <input type="text" name="username" placeholder="username"/>
+                            <label htmlFor="email">Email:</label>
+                            <input type="email" required placeholder="username"/>
                         </div>
 
                     </div>

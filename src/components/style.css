@@ -13,8 +13,6 @@
 .contentback {
     margin-top:10px;
     background-color:#568277;
-    width: 360px;
-    height: 670px;
     border-radius: 30px;
 }
 
@@ -86,7 +84,6 @@ input{
 
 .btnLogin{
     align-self: flex-start;
-    margin-left: 40px;
     
     font-family: 'Rochester', cursive;
     font-size: 27px;
@@ -101,8 +98,6 @@ input{
 }
 
 .btnResetPassword{
-    margin-left: 90px;
-    
     font-family: 'Rochester', cursive;
     color: white;
     font-size: 29px;

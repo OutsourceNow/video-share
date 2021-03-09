@@ -1,11 +1,29 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import loginImg from "../showroom.svg";
 import welcomeImg from "../welcome.svg";
 import placeImg from "../placeholder.svg";
 import {Link} from 'react-router-dom';
-import './style.css'
+import {withRouter} from "react-router";
+import app from "../firebase";
+import './style.css';
 
-export default function Register() {
+
+const Register =({history}) => {
+    const handleSignUp = useCallback(async event =>{
+        event.preventDefault();
+        const {email, password} = event.target.element;
+        try{
+            await app
+            .auth()
+            .createUserWithEmailAndPassword(email.value, password.value);
+            history.push("/");
+        } catch(error){
+            alert(error);
+        }
+    },[history]);
+
+
+
    
 
         return(
@@ -22,34 +40,36 @@ export default function Register() {
                         <img src={welcomeImg} alt=""/>
                     </div>
                     
-                    <div className="form">
+                    <form className="form" onSubmit={handleSignUp}>
                         
                         <div className="form-group">
-                            <label htmlFor="username">Username</label>
-                            <input type="text" name="username" placeholder="username"/>
-                        </div>
-
-                        <div className="form-group">
                             <label htmlFor="email">Email</label>
-                            <input type="text" name="email" placeholder="email"/>
+                            <input type="email" required name="email" placeholder="Email"/>
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="text" name="password" placeholder="password"/>
+                            <label htmlFor="email">Password</label>
+                            <input type="password" required name="password" placeholder="password"/>
+                        </div>
+
+                        <div className="form-group">
+                            <label htmlFor="password">Password confirmation</label>
+                            <input type="password" name="password" required placeholder="password confirmation"/>
+                        </div>
+
+                        <div className="footer">
+                            <button type="submit"  className="btnSignUp">SignUp</button>
+                            <Link to="/">
+                                <button type="button"  className="btnBackToLogin">Already a User</button>
+                                </Link>
                         </div>
 
 
-                    </div>
+                    </form>
 
                 </div>
 
-                <div className="footer">
-                    <button type="button" className="btnSignUp">SignUp</button>
-                    <Link to="/">
-                        <button type="button" className="btnBackToLogin">Already a User</button>
-                    </Link>
-                </div>
+
                 
                 <div className="imagePlaceholder">
                     <img src={placeImg} alt=""/>
@@ -58,5 +78,7 @@ export default function Register() {
             </div>
          
         </div>
-        );
-    }
+        )
+}
+
+export default withRouter(Register);

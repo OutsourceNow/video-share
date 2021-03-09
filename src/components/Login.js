@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useCallback, useContext } from 'react';
+import {withRouter, Redirect} from "react-router"
+import app from "../firebase"
+import {AuthContext} from "../Auth"
 import loginImg from "../showroom.svg";
 import welcomeImg from "../welcome.svg";
 import placeImg from "../placeholder.svg";
 import {Link} from 'react-router-dom';
 import './style.css'
 
-export default function Login() {
+const Login = ({history}) => {
+    const handleLogin =useCallback(
+        async event => {
+            event.preventDefault();
+            const {email, password} = event.target.elements;
+            try {
+                await app
+                .auth()
+                .signInWithEmailAndPassword(email.value, password.value);
+                history.push("/");
+            }catch (error){
+                alert(error);
+            }
+        },
+        [history]
+    );
 
+    const {currentUser} = useContext(AuthContext);
+    if (currentUser) {
+        return <Redirect to ="/Reset" />
+    }
 
 
         return(
@@ -22,29 +44,30 @@ export default function Login() {
                         <img src={welcomeImg} alt="" />
                     </div>
                     
-                    <div className="form">
-                        <div className="form-group">
-                            <label htmlFor="username">Username:</label>
-                            <input type="text" name="username" placeholder="username"/>
-                        </div>
+                    <form className="form" onSubmit={handleLogin}>
+                            <div className="form-group">
+                                <label htmlFor="email">Email:</label>
+                                <input type="email" name="email" placeholder="email"/>
+                            </div>
 
-                        <div className="form-group">
-                            <label htmlFor="password">Password:</label>
-                            <input type="text" name="password" placeholder="password"/>
-                        </div>
+                            <div className="form-group">
+                                <label htmlFor="password">Password:</label>
+                                <input type="text" name="password" required placeholder="password"/>
+                            </div>
+                            
+                            <div className="footer">
+                                <button type="submit"  className="btnLogin">login</button>
+                                
+                                <Link to="/Reset" className="btnRegisterLink">
+                                    <button type="button" className="btnForgotPassword">Forgot Password</button>
+                                </Link>
+                            </div>
 
-
-                    </div>
+                    </form>
 
                 </div>
                 
-                <div className="footer">
-                    <button type="button" className="btnLogin">login</button>
 
-                    <Link to="/Reset" className="btnRegisterLink">
-                        <button type="button" className="btnForgotPassword">Forgot Password</button>
-                    </Link>
-                </div>
 
                 <Link to="/Register" className="btnRegisterLink">
                     <button type="button" className="btnRegister">Register</button>
@@ -58,4 +81,6 @@ export default function Login() {
             
         </div>
         );
-    }
+};
+
+export default withRouter(Login);

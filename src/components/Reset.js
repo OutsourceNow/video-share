@@ -1,15 +1,15 @@
 import React from 'react';
-import loginImg from "../../showroom.svg";
-import welcomeImg from "../../welcome.svg";
-import placeImg from "../../placeholder.svg";
+import loginImg from "../showroom.svg";
+import welcomeImg from "../welcome.svg";
+import placeImg from "../placeholder.svg";
 import {Link} from 'react-router-dom';
 
-export class Reset extends React.Component {
+export default function Reset() {
 
 
-    render(){
+    
         return(
-        <div className="base-container" ref={this.props.containerRef}>
+        <div className="base-container" >
             <div className="contentback">
                 <div className="content">
 
@@ -49,4 +49,3 @@ export class Reset extends React.Component {
         </div>
         );
     }
-}

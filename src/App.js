@@ -1,7 +1,9 @@
 import React from 'react'
 import './App.css';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
-import { Login, Register, Reset } from './components/login';
+import Login from './components/Login'
+import Register from './components/Register'
+import Reset from './components/Reset'
 
 
 function App() {

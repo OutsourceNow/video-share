@@ -25,10 +25,10 @@ const Login = ({history}) => {
         [history]
     );
 
-    const {currentUser} = useContext(AuthContext);
-    if (currentUser) {
-        return <Redirect to ="/Reset" />
-    }
+    // const {currentUser} = useContext(AuthContext);
+    // if (currentUser) {
+    //     return <Redirect to ="/Reset" />
+    // }
 
 
         return(

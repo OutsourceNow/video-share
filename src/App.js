@@ -4,12 +4,11 @@ import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Login from './components/Login'
 import Register from './components/Register'
 import Reset from './components/Reset'
-import { AuthProvider } from "./Auth"
+// import { AuthProvider } from "./Auth"
 
 
 function App() {
   return(
-    <AuthProvider>
       <Router>
         <div className="App">
           <Switch>
@@ -20,7 +19,6 @@ function App() {
           </Switch>
         </div>
       </Router>
-    </AuthProvider>
   )
   
 }

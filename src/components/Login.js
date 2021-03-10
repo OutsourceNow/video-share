@@ -25,10 +25,10 @@ const Login = ({history}) => {
         [history]
     );
 
-    // const {currentUser} = useContext(AuthContext);
-    // if (currentUser) {
-    //     return <Redirect to ="/Reset" />
-    // }
+    const {currentUser} = useContext(AuthContext);
+    if (currentUser) {
+        return <Redirect to ="/Home" />
+    }
 
 
         return(
@@ -56,7 +56,9 @@ const Login = ({history}) => {
                             </div>
                             
                             <div className="footer">
-                                <button type="submit"  className="btnLogin">login</button>
+                                <Link to="/Home" className="btnRegisterLink">
+                                    <button type="submit"  className="btnLogin">login</button>
+                                </Link>
                                 
                                 <Link to="/Reset" className="btnRegisterLink">
                                     <button type="button" className="btnForgotPassword">Forgot Password</button>

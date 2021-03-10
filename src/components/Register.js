@@ -58,10 +58,10 @@ const Register =({history}) => {
                         </div>
 
                         <div className="footer">
-                            <button type="submit"  className="btnSignUp">SignUp</button>
+                                <button type="submit"  className="btnSignUp">SignUp</button>
                             <Link to="/">
                                 <button type="button"  className="btnBackToLogin">Already a User</button>
-                                </Link>
+                            </Link>
                         </div>
 
 

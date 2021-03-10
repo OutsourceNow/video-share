@@ -27,14 +27,15 @@ export default function Reset() {
                             <input type="email" required placeholder="username"/>
                         </div>
 
+                        <div className="footer">
+                    <button type="button" className="btnResetPassword">Reset Password</button>
+
+                </div>
                     </div>
 
                 </div>
                 
-                <div className="footer">
-                    <button type="button" className="btnResetPassword">Reset Password</button>
 
-                </div>
 
                 <Link to="/">
                         <button type="button" className="btnReurnToLogin">Return to login</button>

@@ -52,7 +52,7 @@ const Login = ({history}) => {
 
                             <div className="form-group">
                                 <label htmlFor="password">Password:</label>
-                                <input type="text" name="password" required placeholder="password"/>
+                                <input type="password" name="password" required placeholder="password"/>
                             </div>
                             
                             <div className="footer">

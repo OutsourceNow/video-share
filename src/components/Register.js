@@ -11,12 +11,12 @@ import './style.css';
 const Register =({history}) => {
     const handleSignUp = useCallback(async event =>{
         event.preventDefault();
-        const {email, password} = event.target.element;
+        const {email, password} = event.target.elements;
         try{
             await app
             .auth()
             .createUserWithEmailAndPassword(email.value, password.value);
-            history.push("/");
+            history.push("/Home");
         } catch(error){
             alert(error);
         }
@@ -52,10 +52,7 @@ const Register =({history}) => {
                             <input type="password" required name="password" placeholder="password"/>
                         </div>
 
-                        <div className="form-group">
-                            <label htmlFor="password">Password confirmation</label>
-                            <input type="password" name="password" required placeholder="password confirmation"/>
-                        </div>
+
 
                         <div className="footer">
                                 <button type="submit"  className="btnSignUp">SignUp</button>

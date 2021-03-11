@@ -18,7 +18,6 @@ function App() {
               <Route path="/Register" component={Register} />
               <Route path="/Reset" component={Reset} />
               <Route path="/Home" component={Home} />
-
             </Switch>
           </div>
         </Router>

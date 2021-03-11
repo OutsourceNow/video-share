@@ -17,7 +17,7 @@ const Login = ({history}) => {
                 await app
                 .auth()
                 .signInWithEmailAndPassword(email.value, password.value);
-                history.push("/");
+                history.push("/Home");
             }catch (error){
                 alert(error);
             }
@@ -56,9 +56,7 @@ const Login = ({history}) => {
                             </div>
                             
                             <div className="footer">
-                                <Link to="/Home" className="btnRegisterLink">
                                     <button type="submit"  className="btnLogin">login</button>
-                                </Link>
                                 
                                 <Link to="/Reset" className="btnRegisterLink">
                                     <button type="button" className="btnForgotPassword">Forgot Password</button>
@@ -67,13 +65,11 @@ const Login = ({history}) => {
 
                     </form>
 
-                </div>
-                
-
-
-                <Link to="/Register" className="btnRegisterLink">
+                    <Link to="/Register" className="btnRegisterLink">
                     <button type="button" className="btnRegister">Register</button>
                 </Link>
+
+                </div>
 
                 <div className="imagePlaceholder">
                     <img src={placeImg} alt=""/>

@@ -127,7 +127,7 @@ input{
 .btnRegister{
     margin-top: 2px;
     margin-bottom: 4px;
-    margin-left: 40px;
+    margin-left: 20px;
     line-height: 39px;
     width:px;
 
@@ -155,8 +155,6 @@ input{
 
 .btnSignUp{
     margin-bottom: 5px;
-    margin-left: 40px;
-
     background-color: transparent;
     border:0;
     font-size: 29px;

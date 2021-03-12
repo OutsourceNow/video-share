@@ -6,6 +6,7 @@ import Register from './components/Register'
 import Reset from './components/Reset'
 import Home from './components/Home'
 import { AuthProvider } from "./Auth"
+import PrivateRoute from "./PrivateRoute"
 
 
 function App() {
@@ -14,10 +15,10 @@ function App() {
         <Router>
           <div className="App">
             <Switch>
-              <Route path="/" exact component={Login} />
-              <Route path="/Register" component={Register} />
-              <Route path="/Reset" component={Reset} />
-              <Route path="/Home" component={Home} />
+              <PrivateRoute exact path="/Home" component={Home} />
+              <Route exact path="/" component={Login} />
+              <Route exact path="/Register" component={Register} />
+              <Route exact path="/Reset" component={Reset} />
             </Switch>
           </div>
         </Router>

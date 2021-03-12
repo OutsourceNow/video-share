@@ -48,7 +48,7 @@ const Register =({history}) => {
                         </div>
 
                         <div className="form-group">
-                            <label htmlFor="email">Password</label>
+                            <label htmlFor="password">Password</label>
                             <input type="password" required name="password" placeholder="password"/>
                         </div>
 

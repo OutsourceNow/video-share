@@ -1,22 +1,25 @@
-import React from 'react';
+import React, {useCallback} from 'react';
 import loginImg from "../showroom.svg";
 import welcomeImg from "../welcome.svg";
 import placeImg from "../placeholder.svg";
 import {Link} from 'react-router-dom';
 import app from '../firebase'
+import {withRouter} from 'react-router-dom'
 
-export default function Reset() {
 
-
-    const forgotPassword = (email) => {
-        app.auth().sendPasswordResetEmail(email.value)
-        .then(() => {
-            alert ('Please check your email..')
-        }).catch (function (e){
-            console.log(e)
-        })
-    }
-
+    const Reset =({history}) => {
+        const handleResetPassword = useCallback(async event =>{
+            event.preventDefault();
+            const {email} = event.target.elements;
+            try{
+                await app
+                .auth()
+                .sendPasswordResetEmail(email.value);
+                history.push("/");
+            } catch(error){
+                alert(error);
+            }
+        },[history]);
 
     
         return(
@@ -32,7 +35,7 @@ export default function Reset() {
                         <img src={welcomeImg} alt="" />
                     </div>
                     
-                    <form className="form" onSubmit={forgotPassword} >
+                    <form className="form" onSubmit={handleResetPassword} >
                         <div className="form-group">
                             <label htmlFor="email">Email:</label>
                             <input type="email" required name="email" placeholder="email"/>
@@ -58,3 +61,4 @@ export default function Reset() {
         </div>
         );
     }
+ export default withRouter(Reset);

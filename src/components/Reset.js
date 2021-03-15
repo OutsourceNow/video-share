@@ -3,8 +3,19 @@ import loginImg from "../showroom.svg";
 import welcomeImg from "../welcome.svg";
 import placeImg from "../placeholder.svg";
 import {Link} from 'react-router-dom';
+import app from '../firebase'
 
 export default function Reset() {
+
+
+    const forgotPassword = (email) => {
+        app.auth().sendPasswordResetEmail(email.value)
+        .then(() => {
+            alert ('Please check your email..')
+        }).catch (function (e){
+            console.log(e)
+        })
+    }
 
 
     
@@ -21,21 +32,18 @@ export default function Reset() {
                         <img src={welcomeImg} alt="" />
                     </div>
                     
-                    <div className="form">
+                    <form className="form" onSubmit={forgotPassword} >
                         <div className="form-group">
                             <label htmlFor="email">Email:</label>
-                            <input type="email" required placeholder="username"/>
+                            <input type="email" required name="email" placeholder="email"/>
                         </div>
 
                         <div className="footer">
-                    <button type="button" className="btnResetPassword">Reset Password</button>
+                            <button type="submit"  className="btnResetPassword">Reset Password</button>
+                        </div>
+                    </form>
 
                 </div>
-                    </div>
-
-                </div>
-                
-
 
                 <Link to="/">
                         <button type="button" className="btnReurnToLogin">Return to login</button>

@@ -43,8 +43,8 @@ const Register =({history}) => {
                     <form className="form" onSubmit={handleSignUp}>
                         
                         <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input type="email" required name="email" placeholder="Email"/>
+                            <label htmlFor="email">Email:</label>
+                            <input type="email" required name="email" placeholder="example@gmail.com"/>
                         </div>
 
                         <div className="form-group">

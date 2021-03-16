@@ -1,5 +1,6 @@
 import React, {useCallback} from 'react';
 import loginImg from "../showroom.svg";
+import noteImg from "../Note.svg";
 import welcomeImg from "../welcome.svg";
 import placeImg from "../placeholder.svg";
 import {Link} from 'react-router-dom';
@@ -51,6 +52,10 @@ import {withRouter} from 'react-router-dom'
                 <Link to="/">
                         <button type="button" className="btnReurnToLogin">Return to login</button>
                 </Link>
+
+                <div className="imageNote">
+                    <img src={noteImg} alt="" />
+                </div>
 
                 <div className="imagePlaceholder">
                     <img src={placeImg} alt=""/>

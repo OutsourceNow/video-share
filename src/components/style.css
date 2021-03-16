@@ -7,13 +7,15 @@
     flex-direction: column;
     align-items: center;
     background-color: rgb(69, 145, 119);
-    
+    background-color:#568277;
+    /* border-radius: 30px; */
 }
 
 .contentback {
     margin-top:10px;
     background-color:#568277;
     border-radius: 30px;
+    border-style: double;
 }
 
 .content{
@@ -176,4 +178,27 @@ input{
 .btnRegisterLink{
     display: unset;
     color: transparent;
+}
+
+.placeholderHome{
+    margin-top: 10px;
+}
+
+.signOut{
+    font-family: 'Rochester', cursive;
+    font-size: 23px;
+    color: white;
+    height: 71px;
+    width: 71px;
+    background-color: #0F2626;
+    border-radius: 50%;
+    display: inline-block;
+    border:0;
+    transition: all 300ms ease-in-out; 
+
+    margin-bottom: 10px;
+}
+
+.note{
+    font-family: 'Rochester', cursive;
 }

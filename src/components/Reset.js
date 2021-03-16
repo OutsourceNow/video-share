@@ -43,12 +43,12 @@ import {withRouter} from 'react-router-dom'
 
                     <Link to="/">
                         <button type="button" className="btnReturnToLogin">Return to login</button>
-                </Link>
+                    </Link>
 
-                <img src={noteImg} alt="" className="imageNote"/>
+                    <img src={noteImg} alt="" className="imageNote"/>
 
-                <img src={placeImg} alt="" className="imagePlaceholder"/>
-                
+                    <img src={placeImg} alt="" className="imagePlaceholder"/>
+
                 </div>
 
 

@@ -43,7 +43,7 @@ const Login = ({history}) => {
                     <form className="form" onSubmit={handleLogin}>
                             <div className="form-group">
                                 <label htmlFor="email">Email:</label>
-                                <input type="email" name="email" placeholder="email"/>
+                                <input type="email" name="email" placeholder="example@gmail.com"/>
                             </div>
 
                             <div className="form-group">

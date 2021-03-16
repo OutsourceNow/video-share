@@ -32,24 +32,22 @@ const Register =({history}) => {
             <div className="contentback">
                 <div className="content">
 
-                     <div className="imageLogo">
-                         <img src={loginImg} alt=""/>
-                    </div>
+
+                    <img src={loginImg} alt="" className="imageLogo"/>
                     
-                    <div className="imageWelcome">
-                        <img src={welcomeImg} alt=""/>
-                    </div>
+
+                    <img src={welcomeImg} alt="" className="imageWelcome"/>
                     
                     <form className="form" onSubmit={handleSignUp}>
                         
                         <div className="form-group">
-                            <label htmlFor="email">Email:</label>
-                            <input type="email" required name="email" placeholder="example@gmail.com"/>
-                        </div>
 
-                        <div className="form-group">
+                            <label htmlFor="email">Email:</label>
+                            <input type="email" required placeholder="example@gmail.com"/>
+
                             <label htmlFor="password">Password</label>
-                            <input type="password" required name="password" placeholder="password"/>
+                            <input type="password" required placeholder="password"/>
+
                         </div>
 
 

@@ -35,14 +35,10 @@ import {withRouter} from 'react-router-dom'
                     
                     
                     <form className="form" onSubmit={handleResetPassword} >
-                        <div className="form-group">
                             <label htmlFor="email">Email:</label>
-                            <input type="email" required name="email" placeholder="email"/>
-                        </div>
+                            <input type="email" required placeholder="example@gmail.com"/>
 
-                        <div className="footer">
                             <button type="submit"  className="btnResetPassword">Reset Password</button>
-                        </div>
                     </form>
 
                 </div>
@@ -56,7 +52,7 @@ import {withRouter} from 'react-router-dom'
                 <img src={placeImg} alt="" className="imagePlaceholder"/>
 
             </div>
-            
+  
         </div>
         );
     }

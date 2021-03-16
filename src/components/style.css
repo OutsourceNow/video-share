@@ -4,6 +4,7 @@
     width:initial;
     height:initial;
     display: flex;
+    flex-grow: inherit;
     flex-direction: column;
     align-items: center;
     background-color: rgb(69, 145, 119);
@@ -16,7 +17,7 @@
     margin-top:10px;
     background-color:#568277;
     border-radius: 30px;
-    border-style: double;
+    border-style:ridge;
     display: flex;
     flex-direction: column;
 }

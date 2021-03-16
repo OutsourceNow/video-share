@@ -41,15 +41,17 @@ import {withRouter} from 'react-router-dom'
                             <button type="submit"  className="btnResetPassword">Reset Password</button>
                     </form>
 
-                </div>
-
-                <Link to="/">
+                    <Link to="/">
                         <button type="button" className="btnReturnToLogin">Return to login</button>
                 </Link>
 
                 <img src={noteImg} alt="" className="imageNote"/>
 
                 <img src={placeImg} alt="" className="imagePlaceholder"/>
+                
+                </div>
+
+
 
             </div>
   

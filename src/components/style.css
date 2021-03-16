@@ -209,8 +209,6 @@ input{
     height: 140px;
 }
 .imagePlaceholder{
-    display: flex;
-    flex-direction: column;
     width: 322px;
     height: 190px;
 }

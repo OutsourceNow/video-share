@@ -9,22 +9,13 @@ const Home = () => {
 
     return (
         <>
-        <Link to="/Home">
-            <h1>Home</h1>
-        </Link>
-
         <div className="base-container">
-            <div className="imageLogo">
-                <img src={loginImg} alt=""/>
-            </div>
-
-            <div className="imageWelcome">
-              <img src={welcomeImg} alt="" />
-             </div>
-
-            <div className="placeholderHome">
-                <img src={placeholderHome} alt=""/>
-            </div>
+            <Link to="/Home" >
+                <img src={loginImg} alt="" className="imageLogo"/>
+            </Link>
+            
+            <img src={welcomeImg} alt="" className="imageWelcome"/>
+            <img src={placeholderHome} alt="" className="placeholderHome"/>
 
             <h3 className="note">
                 This is simply a site under development,

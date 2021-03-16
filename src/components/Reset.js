@@ -28,13 +28,11 @@ import {withRouter} from 'react-router-dom'
             <div className="contentback">
                 <div className="content">
 
-                     <div className="imageLogo">
-                         <img src={loginImg} alt="" />
-                    </div>
+                     
+                     <img src={loginImg} alt="" className="imageLogoReset"/>
                     
-                    <div className="imageWelcome">
-                        <img src={welcomeImg} alt="" />
-                    </div>
+                    <img src={welcomeImg} alt="" className="imageWelcome"/>
+                    
                     
                     <form className="form" onSubmit={handleResetPassword} >
                         <div className="form-group">
@@ -50,16 +48,12 @@ import {withRouter} from 'react-router-dom'
                 </div>
 
                 <Link to="/">
-                        <button type="button" className="btnReurnToLogin">Return to login</button>
+                        <button type="button" className="btnReturnToLogin">Return to login</button>
                 </Link>
 
-                <div className="imageNote">
-                    <img src={noteImg} alt="" />
-                </div>
+                <img src={noteImg} alt="" className="imageNote"/>
 
-                <div className="imagePlaceholder">
-                    <img src={placeImg} alt=""/>
-                </div>
+                <img src={placeImg} alt="" className="imagePlaceholder"/>
 
             </div>
             

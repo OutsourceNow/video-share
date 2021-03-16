@@ -12,7 +12,7 @@ const Home = () => {
         <Link to="/Home">
             <h1>Home</h1>
         </Link>
-        
+
         <div className="base-container">
             <div className="imageLogo">
                 <img src={loginImg} alt=""/>

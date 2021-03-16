@@ -36,13 +36,9 @@ const Login = ({history}) => {
             <div className="contentback">
                 <div className="content">
 
-                     <div className="imageLogo">
-                         <img src={loginImg} alt="" />
-                    </div>
+                         <img src={loginImg} alt="" className="imageLogo"/>
                     
-                    <div className="imageWelcome">
-                        <img src={welcomeImg} alt="" />
-                    </div>
+                        <img src={welcomeImg} alt="" className="imageWelcome"/>
                     
                     <form className="form" onSubmit={handleLogin}>
                             <div className="form-group">
@@ -66,14 +62,13 @@ const Login = ({history}) => {
                     </form>
 
                     <Link to="/Register" className="btnRegisterLink">
-                    <button type="button" className="btnRegister">Register</button>
-                </Link>
+                        <button type="button" className="btnRegister">Register</button>
+                    </Link>
 
                 </div>
 
-                <div className="imagePlaceholder">
-                    <img src={placeImg} alt=""/>
-                </div>
+
+                <img src={placeImg} alt="" className="imagePlaceholder"/>
 
             </div>
             

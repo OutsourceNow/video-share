@@ -68,9 +68,8 @@ const Register =({history}) => {
 
 
                 
-                <div className="imagePlaceholder">
-                    <img src={placeImg} alt=""/>
-                </div>
+                
+                    <img src={placeImg} alt="" className="imagePlaceholder"/>
 
             </div>
          

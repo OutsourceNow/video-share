@@ -33,15 +33,18 @@ const Login = ({history}) => {
 
         return(
         <div className="base">
+            
                 <img src={loginImg} alt="" className="imageLogo"/>
                     
-                <img src={welcomeImg} alt="" className="imageWelcome"/>
+                
 
                 <div className="content">
 
                 <img src={placeImg} alt="" className="imagePlaceholder"/>
                     
                     <form className="form" onSubmit={handleLogin}>
+
+                    <img src={welcomeImg} alt="" className="imageWelcome"/>
                             <div className="form-group">
                                 <label htmlFor="email">Email:</label>
                                 <input type="email" name="email" placeholder="example@gmail.com"/>

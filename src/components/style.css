@@ -1,16 +1,28 @@
-
 .base{
     width: 100%;
     height: 100%;
-    background-color: rgb(19, 67, 73);
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .imageLogo{
-    width: 50%;
-    height:5%;
+    width: 100%;
+    height: 20%;
+    align-self: center;
 }
 
-.imageWelcome{
-    width:20%;
-    height: 5%;
+.content{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.imagePlaceholder{
+    width: 50%;
+    height: 100%;
+}
+
+.form{
+    width: 50%;
 }

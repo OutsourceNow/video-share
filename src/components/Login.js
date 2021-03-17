@@ -32,13 +32,14 @@ const Login = ({history}) => {
 
 
         return(
-        <div className="base-container" >
-            <div className="contentback">
+        <div className="base">
+                <img src={loginImg} alt="" className="imageLogo"/>
+                    
+                <img src={welcomeImg} alt="" className="imageWelcome"/>
+
                 <div className="content">
 
-                         <img src={loginImg} alt="" className="imageLogo"/>
-                    
-                        <img src={welcomeImg} alt="" className="imageWelcome"/>
+                <img src={placeImg} alt="" className="imagePlaceholder"/>
                     
                     <form className="form" onSubmit={handleLogin}>
                             <div className="form-group">
@@ -59,19 +60,16 @@ const Login = ({history}) => {
                                 </Link>
                             </div>
 
+                            <Link to="/Register" className="btnRegisterLink">
+                                <button type="button" className="btnRegister">Register</button>
+                            </Link>
+
                     </form>
 
-                    <Link to="/Register" className="btnRegisterLink">
-                        <button type="button" className="btnRegister">Register</button>
-                    </Link>
+
 
                 </div>
 
-
-                <img src={placeImg} alt="" className="imagePlaceholder"/>
-
-            </div>
-            
         </div>
         );
 };

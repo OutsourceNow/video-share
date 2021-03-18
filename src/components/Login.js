@@ -4,7 +4,7 @@ import app from "../firebase"
 import {AuthContext} from "../Auth"
 import loginImg from "../showroom.svg";
 import welcomeImg from "../welcome.svg";
-import placeImg from "../placeholder.svg";
+import placeImg from "../Image.svg";
 import {Link} from 'react-router-dom';
 import './style.css'
 
@@ -33,14 +33,17 @@ const Login = ({history}) => {
 
         return(
         <div className="base">
-            
-            <img src={loginImg} alt="" className="imageLogo"/>
+
+            <div className="imageLogo">
+            <img src={loginImg} alt="" className="loginImg"/>
+            </div>
             
             <div className="content">
 
-                <div className="placeHolder">
-                    <img src={placeImg} alt="" className="imagePlaceholder"/>
+                <div className="imagePlaceholder">
+                    <img src={placeImg} alt="" className="placeImg" />
                 </div>
+
                     <form className="form" onSubmit={handleLogin}>
 
                         <img src={welcomeImg} alt="" className="imageWelcome"/>
@@ -55,12 +58,12 @@ const Login = ({history}) => {
                         <div className="footer">
                         <button type="submit"  className="btnLogin">login</button>
                             
-                        <Link to="/Reset" className="btnRegisterLink">
-                            <button type="button" className="btnForgotPassword">Forgot Password</button>
+                        <Link to="/Reset" className="btnLink">
+                            <button className="btnForgotPassword">Forgot Password</button>
                         </Link>
                         </div>
 
-                        <Link to="/Register" className="btnRegisterLink">
+                        <Link to="/Register" className="btnLink">
                             <button type="button" className="btnRegister">Don't have an account?Register</button>
                         </Link>
                             

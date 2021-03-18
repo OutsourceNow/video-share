@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react';
 import loginImg from "../showroom.svg";
 import welcomeImg from "../welcome.svg";
-import placeImg from "../placeholder.svg";
+import placeImg from "../Image.svg";
 import {Link} from 'react-router-dom';
 import {withRouter} from "react-router";
 import app from "../firebase";
@@ -27,38 +27,36 @@ const Register =({history}) => {
    
 
         return(
-        <div className="base-container" >
+        <div className="base">
 
-            <div className="contentback">
+            <div className="imageLogo">
+            <img src={loginImg} alt="" className="loginImg"/>
+            </div>
+            
                 <div className="content">
 
-
-                    <img src={loginImg} alt="" className="imageLogo"/>
-                    
-
-                    <img src={welcomeImg} alt="" className="imageWelcome"/>
+                <div className="imagePlaceholder">
+                    <img src={placeImg} alt="" className="placeImg" />
+                </div>
                     
                     <form className="form" onSubmit={handleSignUp}>
+
+                    <img src={welcomeImg} alt="" className="imageWelcome"/>
                         
-                        <div className="form-group">
 
-                            <label htmlFor="email">Email:</label>
-                            <input type="email" required placeholder="example@gmail.com"/>
+                            <label htmlFor="email" className="label">Email:</label>
+                            <input type="email" required placeholder="example@gmail.com" className="input"/>
 
-                            <label htmlFor="password">Password</label>
-                            <input type="password" required placeholder="password"/>
-
-                        </div>
+                            <label htmlFor="password" className="label">Password</label>
+                            <input type="password" required placeholder="password" className="input"/>
 
 
-
-                        <div className="footer">
+                        <div className="footer" >
                                 <button type="submit"  className="btnSignUp">SignUp</button>
-                            <Link to="/">
-                                <button type="button"  className="btnBackToLogin">Already a User</button>
+                            <Link to="/" className="btnLink">
+                                <button type="button"  className="btnReturnLogin">Already a User?Login</button>
                             </Link>
                         </div>
-
 
                     </form>
 
@@ -66,7 +64,7 @@ const Register =({history}) => {
 
                 <img src={placeImg} alt="" className="imagePlaceholderRegister"/>
 
-            </div>
+
          
         </div>
         )

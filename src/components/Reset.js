@@ -1,8 +1,8 @@
 import React, {useCallback} from 'react';
 import loginImg from "../showroom.svg";
-import noteImg from "../Note.svg";
+// import noteImg from "../Note.svg";
 import welcomeImg from "../welcome.svg";
-import placeImg from "../placeholder.svg";
+import placeImg from "../Image.svg";
 import {Link} from 'react-router-dom';
 import app from '../firebase'
 import {withRouter} from 'react-router-dom'
@@ -24,36 +24,35 @@ import {withRouter} from 'react-router-dom'
 
     
         return(
-        <div className="base-container" >
-            <div className="contentback">
+        <div className="base" >
+            
+            <div className="imageLogo">
+            <img src={loginImg} alt="" className="loginImg"/>
+            </div>
+
                 <div className="content">
 
-                     
-                     <img src={loginImg} alt="" className="imageLogoReset"/>
-                    
-                    <img src={welcomeImg} alt="" className="imageWelcome"/>
-                    
-                    
+                    <div className="imagePlaceholder">
+                        <img src={placeImg} alt="" className="placeImg" />
+                    </div>
+                        
                     <form className="form" onSubmit={handleResetPassword} >
-                            <label htmlFor="email">Email:</label>
-                            <input type="email" required placeholder="example@gmail.com"/>
+
+                    <img src={welcomeImg} alt="" className="imageWelcome"/>
+
+                            <label htmlFor="email" className="label">Email:</label>
+                            <input type="email" required placeholder="example@gmail.com" className="input"/>
 
                             <button type="submit"  className="btnResetPassword">Reset Password</button>
+
+                            <Link to="/" className="btnLink">
+                                <button type="button" className="btnReturnLogin">Already have an account?Login</button>
+                            </Link>
                     </form>
 
-                    <Link to="/">
-                        <button type="button" className="btnReturnToLogin">Return to login</button>
-                    </Link>
 
-                    <img src={noteImg} alt="" className="imageNote"/>
-
-                    <img src={placeImg} alt="" className="imagePlaceholder"/>
 
                 </div>
-
-
-
-            </div>
   
         </div>
         );

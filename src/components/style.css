@@ -1,32 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 
-
+.base{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-wrap: wrap;
+}
 .imageLogo{
-    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 20%;
+}
+.loginImg{
+    width: 100%;
+    height: 100%;
 }
 .content{
     margin-top: 20px;
     width:100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
+    height: 80%;
+    display:flex;
 }
 
-.placeHolder{
-    width: 50%;
-    height: 100%;
-}
 
 .imagePlaceholder{
-    width: 80%;
-    height: 100%;
+    margin-left: 10px;
+    width: 50%;
+    height: 90%;
+    
+}
+
+.placeImg{
+    border-radius: 30px;
+    width:100%;
+    height:100%;
 }
 
 .form{
-    margin-left: 10px;
-    width: 40%;
+    margin-left: 40px;
+    width: 30%;
+    height: 70%;
     display: flex;
     flex-direction: column;
+    align-content: center;
 }
 
 .imageWelcome{
@@ -113,6 +131,80 @@
 
 }
 
-.btnRegisterLink{
+.btnLink{
     color: transparent;
+}
+
+
+/* Register */
+
+.btnSignUp{
+    margin-top: 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    align-self: flex-start;
+    font-family: 'Rochester','cursive';
+    font-size: 20px;
+    cursor:pointer;
+    border-radius: 4px;
+}
+
+.btnSignUp:hover{
+    margin-top: 5px;
+    background-color: rgb(74, 106, 165);
+    color: white;
+    display: flex;
+    align-self: flex-start;
+    font-family: 'Rochester','cursive';
+    font-size: 20px;
+    cursor:pointer;
+    border-radius: 4px;
+}
+
+.btnReturnLogin{
+    display: flex;
+    font-family: 'Rochester','cursive';
+    font-size: 20px;
+    cursor:pointer;
+    color: white;
+    border: 0;
+    background-color: transparent;
+}
+
+.btnReturnLogin:hover{
+    display: flex;
+    font-family: 'Rochester','cursive';
+    font-size: 20px;
+    cursor:pointer;
+    color:rgb(74, 106, 165);
+    border: 0;
+    background-color: transparent;
+}
+
+/*Reset*/
+
+.btnResetPassword{
+    margin-top: 5px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    display: flex;
+    align-self: flex-start;
+    font-family: 'Rochester','cursive';
+    font-size: 20px;
+    cursor:pointer;
+    border-radius: 4px;
+
+}
+
+.btnResetPassword:hover{
+    margin-top: 5px;
+    background-color: rgb(74, 106, 165);
+    color: white;
+    display: flex;
+    align-self: flex-start;
+    font-family: 'Rochester','cursive';
+    font-size: 20px;
+    cursor:pointer;
+    border-radius: 4px;
 }

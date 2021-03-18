@@ -34,39 +34,36 @@ const Login = ({history}) => {
         return(
         <div className="base">
             
-                <img src={loginImg} alt="" className="imageLogo"/>
-                    
-                
+            <img src={loginImg} alt="" className="imageLogo"/>
+            
+            <div className="content">
 
-                <div className="content">
-
-                <img src={placeImg} alt="" className="imagePlaceholder"/>
-                    
+                <div className="placeHolder">
+                    <img src={placeImg} alt="" className="imagePlaceholder"/>
+                </div>
                     <form className="form" onSubmit={handleLogin}>
 
-                    <img src={welcomeImg} alt="" className="imageWelcome"/>
-                            <div className="form-group">
-                                <label htmlFor="email">Email:</label>
-                                <input type="email" name="email" placeholder="example@gmail.com"/>
-                            </div>
+                        <img src={welcomeImg} alt="" className="imageWelcome"/>
 
-                            <div className="form-group">
-                                <label htmlFor="password">Password:</label>
-                                <input type="password" name="password" required placeholder="password"/>
-                            </div>
+                        <label htmlFor="email" className="label">Email:</label>
+                        <input type="email" placeholder="example@gmail.com" className="input"/>
+
+                        <label htmlFor="password" className="label">Password:</label>
+                        <input type="password" required placeholder="password" className="input"/>
+                    
                             
-                            <div className="footer">
-                                    <button type="submit"  className="btnLogin">login</button>
-                                
-                                <Link to="/Reset" className="btnRegisterLink">
-                                    <button type="button" className="btnForgotPassword">Forgot Password</button>
-                                </Link>
-                            </div>
+                        <div className="footer">
+                        <button type="submit"  className="btnLogin">login</button>
+                            
+                        <Link to="/Reset" className="btnRegisterLink">
+                            <button type="button" className="btnForgotPassword">Forgot Password</button>
+                        </Link>
+                        </div>
 
-                            <Link to="/Register" className="btnRegisterLink">
-                                <button type="button" className="btnRegister">Register</button>
-                            </Link>
-
+                        <Link to="/Register" className="btnRegisterLink">
+                            <button type="button" className="btnRegister">Don't have an account?Register</button>
+                        </Link>
+                            
                     </form>
 
 

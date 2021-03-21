@@ -39,16 +39,16 @@ const Register =({history}) => {
                     <img src={placeImg} alt="" className="placeImg" />
                 </div>
                     
-                    <form className="form" onSubmit={handleSignUp}>
+                    <form className="formDiv" onSubmit={handleSignUp}>
 
                     <img src={welcomeImg} alt="" className="imageWelcome"/>
                         
 
-                            <label htmlFor="email" className="label">Email:</label>
-                            <input type="email" required placeholder="example@gmail.com" className="input"/>
+                            <label htmlFor="email" className="labelBox">Email:</label>
+                            <input type="email" required="" placeholder="example@gmail.com" className="inputBox"/>
 
-                            <label htmlFor="password" className="label">Password</label>
-                            <input type="password" required placeholder="password" className="input"/>
+                            <label htmlFor="password" className="labelBox">Password</label>
+                            <input type="password" required="" placeholder="password" className="inputBox"/>
 
 
                         <div className="footer" >

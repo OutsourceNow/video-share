@@ -45,10 +45,10 @@ const Register =({history}) => {
                         
 
                             <label htmlFor="email" className="labelBox">Email:</label>
-                            <input type="email" required="" placeholder="example@gmail.com" className="inputBox"/>
+                            <input type="email" name="email" required="" placeholder="example@gmail.com" className="inputBox"/>
 
                             <label htmlFor="password" className="labelBox">Password</label>
-                            <input type="password" required="" placeholder="password" className="inputBox"/>
+                            <input type="password" name="password" required="" placeholder="password" className="inputBox"/>
 
 
                         <div className="footer" >

@@ -8,12 +8,15 @@ import {Link} from "react-router-dom"
 const Home = () => {
 
     return (
-        <div className="base-container">
-            <Link to="/Home" >
-                <img src={loginImg} alt="" className="imageLogo"/>
-            </Link>
+        <div className="baseHome">
+
+
             
-            <img src={welcomeImg} alt="" className="imageWelcome"/>
+                <Link to="/Home" >
+                    <img src={loginImg} alt="" className="loginImgHome"/>
+                </Link>
+             
+            <img src={welcomeImg} alt="" className="imageWelcomeHome"/>
 
             <img src={placeholderHome} alt="" className="placeholderHome"/>
 
@@ -25,6 +28,8 @@ const Home = () => {
             </h3>
 
             <button className="signOut" onClick={() => app.auth().signOut()}>signOut</button>
+
+
         </div>
     )
 }

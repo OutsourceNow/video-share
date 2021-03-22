@@ -41,9 +41,9 @@ import {withRouter} from 'react-router-dom'
                     <img src={welcomeImg} alt="" className="imageWelcome"/>
 
                             <label htmlFor="email" className="labelBox">Email:</label>
-                            <input type="email" required placeholder="example@gmail.com" className="inputBox"/>
+                            <input type="email" name="email" required placeholder="example@gmail.com" className="inputBox"/>
 
-                            <button type="submit"  className="btnResetPassword">Reset Password</button>
+                            <button type="submit" className="btnResetPassword">Reset Password</button>
 
                             <Link to="/" className="btnLink">
                                 <button type="button" className="btnReturnLogin">Already have an account?</button>

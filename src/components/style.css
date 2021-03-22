@@ -51,6 +51,8 @@
     width: 60%;
     align-self: center;
 }
+
+
 .labelBox{
     font-size: 27px;
     display: flex;
@@ -207,4 +209,43 @@
     font-size: 20px;
     cursor:pointer;
     border-radius: 4px;
+}
+
+/*Home*/
+
+.baseHome{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.note{
+    font-family: 'Rochester','cursive';
+    font-size: 30px;
+    color: white;
+}
+
+.signOut{
+    margin-top: 5px;
+    background-color: black;
+    color: white;
+    font-family: 'Rochester','cursive';
+    font-size: 20px;
+    cursor:pointer;
+    border-radius: 4px;
+
+}
+
+.signOut:hover{
+    margin-top: 5px;
+    background-color: black;
+    color: rgb(74, 106, 165);
+    font-family: 'Rochester','cursive';
+    font-size: 20px;
+    cursor:pointer;
+    border-radius: 4px;
+
 }

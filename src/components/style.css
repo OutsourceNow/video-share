@@ -67,8 +67,8 @@
 
 .btnLogin{
     margin-top: 5px;
-    background-color: black;
-    color: white;
+    background-color: rgb(231, 209, 209);
+    color: rgb(0, 0, 0);
     display: flex;
     align-self: flex-start;
     font-family: 'Rochester','cursive';
@@ -92,8 +92,8 @@
 
 .btnForgotPassword{
     margin-top: 5px;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(231, 209, 209);
+    color: rgb(0, 0, 0);
     display: flex;
     align-self: flex-start;
     font-family: 'Rochester','cursive';
@@ -142,8 +142,8 @@
 
 .btnSignUp{
     margin-top: 5px;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(231, 209, 209);
+    color: rgb(0, 0, 0);
     display: flex;
     align-self: flex-start;
     font-family: 'Rochester','cursive';
@@ -188,8 +188,8 @@
 
 .btnResetPassword{
     margin-top: 5px;
-    background-color: rgb(0, 0, 0);
-    color: white;
+    background-color: rgb(231, 209, 209);
+    color: rgb(0, 0, 0);
     display: flex;
     align-self: flex-start;
     font-family: 'Rochester','cursive';
@@ -231,8 +231,8 @@
 
 .signOut{
     margin-top: 5px;
-    background-color: black;
-    color: white;
+    background-color: rgb(231, 209, 209);
+    color: rgb(0, 0, 0);
     font-family: 'Rochester','cursive';
     font-size: 20px;
     cursor:pointer;

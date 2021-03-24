@@ -6,6 +6,7 @@ import placeImg from "../Image.svg";
 import {Link} from 'react-router-dom';
 import app from '../firebase'
 import {withRouter} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 
     const Reset =({history}) => {

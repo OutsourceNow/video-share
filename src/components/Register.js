@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { useCallback } from 'react';
 import loginImg from "../showroom.svg";
 import welcomeImg from "../welcome.svg";
@@ -5,7 +6,7 @@ import placeImg from "../Image.svg";
 import {Link} from 'react-router-dom';
 import {withRouter} from "react-router";
 import app from "../firebase";
-import './style.css';
+// import './style.css';
 
 
 const Register =({history}) => {
@@ -27,7 +28,7 @@ const Register =({history}) => {
    
 
         return(
-        <div className="base">
+        <div className="bg-black">
 
             <div className="imageLogo">
             <img src={loginImg} alt="" className="loginImg"/>
@@ -39,32 +40,28 @@ const Register =({history}) => {
                     <img src={placeImg} alt="" className="placeImg" />
                 </div>
                     
-                    <form className="formDiv" onSubmit={handleSignUp}>
+                    <form className="" onSubmit={handleSignUp}>
 
-                    <img src={welcomeImg} alt="" className="imageWelcome"/>
+                    <img src={welcomeImg} alt="" className=""/>
                         
 
-                            <label htmlFor="email" className="labelBox">Email:</label>
-                            <input type="email" name="email" required placeholder="example@gmail.com" className="inputBox"/>
+                            <label htmlFor="email" className="">Email:</label>
+                            <input type="email" name="email" required placeholder="example@gmail.com" className=""/>
 
                             <label htmlFor="password" className="labelBox">Password</label>
                             <input type="password" name="password" required="" placeholder="password" className="inputBox"/>
 
 
                         <div className="footer" >
-                                <button type="submit"  className="btnSignUp">SignUp</button>
+                                <button type="submit"  className="">SignUp</button>
                             <Link to="/" className="btnLink">
-                                <button type="button"  className="btnReturnLogin">Already a User?Login</button>
+                                <button type="button"  className="">Already a User?Login</button>
                             </Link>
                         </div>
 
                     </form>
 
                 </div>
-
-                <img src={placeImg} alt="" className="imagePlaceholderRegister"/>
-
-
          
         </div>
         )

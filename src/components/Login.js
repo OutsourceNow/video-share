@@ -1,12 +1,13 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
 import React, { useCallback, useContext } from 'react';
 import {withRouter, Redirect} from "react-router"
 import app from "../firebase"
 import {AuthContext} from "../Auth"
 import loginImg from "../showroom.svg";
-import welcomeImg from "../welcome.svg";
+// import welcomeImg from "../welcome.svg";
 import placeImg from "../Image.svg";
 import {Link} from 'react-router-dom';
-import './style.css'
+// import './style.css'
 
 const Login = ({history}) => {
     const handleLogin =useCallback(
@@ -32,39 +33,39 @@ const Login = ({history}) => {
 
 
         return(
-        <div className="base">
+        <div className="container">
 
-            <div className="imageLogo">
-            <img src={loginImg} alt="" className="loginImg"/>
-            </div>
+
+            <img src={loginImg} className="mx-auto d-block" alt="" width="60%"/>
+
             
-            <div className="content">
+            <div className="row">
 
-                <div className="imagePlaceholder">
-                    <img src={placeImg} alt="" className="placeImg" />
-                </div>
+                    <img src={placeImg} alt="" className="col"/>
 
-                    <form className="formDiv" onSubmit={handleLogin}>
+                    <form action="/action_page.php" className="form-group col" onSubmit={handleLogin}>
 
-                        <img src={welcomeImg} alt="" className="imageWelcome"/>
+                        <h1 className="text-white">-Welcome-</h1>
 
-                        <label htmlFor="email" className="labelBox">Email:</label>
-                        <input type="email" name="email" required placeholder="example@gmail.com" className="inputBox"/>
-
-                        <label htmlFor="password" className="labelBox">Password:</label>
-                        <input type="password" name="password" required placeholder="password" className="inputBox"/>
-                    
-                            
-                        <div className="footer">
-                        <button type="submit"  className="btnLogin">login</button>
-                            
-                        <Link to="/Reset" className="btnLink">
-                            <button className="btnForgotPassword">Forgot Password</button>
-                        </Link>
+                        <div className="form-group">
+                            <label for="email" >Email:</label>
+                            <input type="email" nameName="email" required placeholder="example@gmail.com" class="from-control" />
                         </div>
 
-                        <Link to="/Register" className="btnLink">
-                            <button type="button" className="btnRegister">Don't have an account?Register</button>
+                        <div class="form-group">
+                            <label for="password" >Password:</label>
+                            <input type="password" nameName="password" required placeholder="password" class="from-control" />
+                        </div>
+                    
+                            
+                        <button type="submit">login</button>
+                            
+                        <Link to="/Reset" >
+                            <button >Forgot Password</button>
+                        </Link>
+
+                        <Link to="/Register">
+                            <button type="button" className="">Don't have an account?Register</button>
                         </Link>
                             
                     </form>

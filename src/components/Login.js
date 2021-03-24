@@ -1,13 +1,11 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+import {Form, Button} from 'react-bootstrap'
 import React, { useCallback, useContext } from 'react';
 import {withRouter, Redirect} from "react-router"
 import app from "../firebase"
 import {AuthContext} from "../Auth"
-import loginImg from "../showroom.svg";
-// import welcomeImg from "../welcome.svg";
-import placeImg from "../Image.svg";
 import {Link} from 'react-router-dom';
-// import './style.css'
+import placeImg from "../Image.svg";
+import loginImg from "../showroom.svg";
 
 const Login = ({history}) => {
     const handleLogin =useCallback(
@@ -33,42 +31,45 @@ const Login = ({history}) => {
 
 
         return(
-        <div className="container">
-
-
-            <img src={loginImg} className="mx-auto d-block" alt="" width="60%"/>
-
             
+        <div > 
+            <div className="container">
+            <img src={loginImg} alt="" className="loginImg"/>
+            </div>
+
             <div className="row">
 
-                    <img src={placeImg} alt="" className="col"/>
+                <div className="col" style={{width:"80%", marginLeft:"10%", marginRight:"10%"}}>
+                <img src={placeImg} alt="" className="placeImg" />
+                </div>
 
-                    <form action="/action_page.php" className="form-group col" onSubmit={handleLogin}>
+                    <Form style={{width:"80%", marginLeft:"10%", marginRight:"10%"}} className="col" onSubmit={handleLogin}>
 
                         <h1 className="text-white">-Welcome-</h1>
 
-                        <div className="form-group">
-                            <label for="email" >Email:</label>
-                            <input type="email" nameName="email" required placeholder="example@gmail.com" class="from-control" />
-                        </div>
+                        <Form.Group className="form-group">
+                            <Form.Label for="email" >Email:</Form.Label>
+                            <Form.Control type="email" Name="email" required placeholder="example@gmail.com"/>
+                        </Form.Group>
 
-                        <div class="form-group">
-                            <label for="password" >Password:</label>
-                            <input type="password" nameName="password" required placeholder="password" class="from-control" />
-                        </div>
+                        <Form.Group class="form-group">
+                            <Form.Label for="password" >Password:</Form.Label>
+                            <Form.Control type="password" Name="password" required placeholder="password" />
+                        </Form.Group>
                     
-                            
-                        <button type="submit">login</button>
-                            
+                        <Button type="submit">login</Button>
+                        <br/>
+                        <br/>
                         <Link to="/Reset" >
-                            <button >Forgot Password</button>
+                            <Button >Forgot Password</Button>
+                        </Link>
+                        <br/>
+                        <br/>
+                        <Link to="/Register">
+                            <Button type="button" className="">Don't have an account?Register</Button>
                         </Link>
 
-                        <Link to="/Register">
-                            <button type="button" className="">Don't have an account?Register</button>
-                        </Link>
-                            
-                    </form>
+                    </Form>
 
 
 

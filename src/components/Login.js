@@ -5,7 +5,6 @@ import app from "../firebase"
 import {AuthContext} from "../Auth"
 import {Link} from 'react-router-dom';
 import placeImg from "../Image.svg";
-import loginImg from "../showroom.svg";
 
 const Login = ({history}) => {
     const handleLogin =useCallback(
@@ -32,18 +31,19 @@ const Login = ({history}) => {
 
         return(
             
-        <div > 
-            <div className="container">
-            <img src={loginImg} alt="" className="loginImg"/>
-            </div>
+        <div className=""> 
+
+
+        <h1 className="text-center">The Show Room</h1>
 
             <div className="row">
 
-                <div className="col" style={{width:"80%", marginLeft:"10%", marginRight:"10%"}}>
-                <img src={placeImg} alt="" className="placeImg" />
-                </div>
+                    <div className="col" style={{width:"60%", marginLeft:"20%"}}>
+                        <img src={placeImg} alt="" className="rounded" />
+                    </div>
 
-                    <Form style={{width:"80%", marginLeft:"10%", marginRight:"10%"}} className="col" onSubmit={handleLogin}>
+
+                    <Form style={{width:"80%", marginLeft:"10%", marginRight:"20%"}} className="col" onSubmit={handleLogin}>
 
                         <h1 className="text-white">-Welcome-</h1>
 
@@ -70,9 +70,8 @@ const Login = ({history}) => {
                         </Link>
 
                     </Form>
-
-
-
+                    <br/>
+                    <br/>
                 </div>
 
         </div>

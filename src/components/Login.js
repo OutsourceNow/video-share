@@ -63,7 +63,7 @@ const Login = ({history}) => {
                         <br/>
                         <br/>
                         <Link to="/Register">
-                            <Button type="button" className="bg-transparent">Don't have an account?Register</Button>
+                            <Button type="button" className="bg-transparent">Don't have an account? Register</Button>
                         </Link>
                         <br/>
                         <br/>

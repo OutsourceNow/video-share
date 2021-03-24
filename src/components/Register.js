@@ -1,12 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {Form, Button} from 'react-bootstrap'
 import React, { useCallback } from 'react';
-import loginImg from "../showroom.svg";
-import welcomeImg from "../welcome.svg";
 import placeImg from "../Image.svg";
 import {Link} from 'react-router-dom';
 import {withRouter} from "react-router";
 import app from "../firebase";
-// import './style.css';
 
 
 const Register =({history}) => {
@@ -28,39 +26,33 @@ const Register =({history}) => {
    
 
         return(
-        <div className="bg-black">
+        <div className="">
 
-            <div className="imageLogo">
-            <img src={loginImg} alt="" className="loginImg"/>
-            </div>
-            
-                <div className="content">
+            <h1 className="text-center bg-primary" >The Show Room</h1>
 
-                <div className="imagePlaceholder">
-                    <img src={placeImg} alt="" className="placeImg" />
-                </div>
+                <div className="row">
+
                     
-                    <form className="" onSubmit={handleSignUp}>
-
-                    <img src={welcomeImg} alt="" className=""/>
+                <Form style={{width:"60%",marginLeft:"10%",marginBottom:"5%",marginRight:"5%"}} className="col bg-cadetblue" onSubmit={handleSignUp}>
+                    <h1 className="text-center">-Welcome-</h1>
                         
 
-                            <label htmlFor="email" className="">Email:</label>
-                            <input type="email" name="email" required placeholder="example@gmail.com" className=""/>
+                            <Form.Label htmlFor="email" className="">Email:</Form.Label>
+                            <Form.Control type="email" name="email" required placeholder="example@gmail.com" className=""/>
 
-                            <label htmlFor="password" className="labelBox">Password</label>
-                            <input type="password" name="password" required="" placeholder="password" className="inputBox"/>
-
-
-                        <div className="footer" >
-                                <button type="submit"  className="">SignUp</button>
-                            <Link to="/" className="btnLink">
-                                <button type="button"  className="">Already a User?Login</button>
+                            <Form.Label htmlFor="password" className="labelBox">Password</Form.Label>
+                            <Form.Control type="password" name="password" required="" placeholder="password" className="inputBox"/>
+                            <br/>
+                                <Button type="submit"  className="">SignUp</Button>
+                            <br/>
+                            <br/>
+                            <Link to="/" className="">
+                                <Button type="button" className="bg-transparent">Already a User? Login</Button>
                             </Link>
-                        </div>
-
-                    </form>
-
+                    </Form>
+                    <div className="col" style={{width:"70%",marginLeft:"5%",marginRight:"5%",marginBottom:"5%"}}>
+                        <img src={placeImg} alt="" className="rounded" />
+                    </div>
                 </div>
          
         </div>

@@ -1,12 +1,11 @@
 import React, {useCallback} from 'react';
-import loginImg from "../showroom.svg";
 // import noteImg from "../Note.svg";
-import welcomeImg from "../welcome.svg";
 import placeImg from "../Image.svg";
 import {Link} from 'react-router-dom';
 import app from '../firebase'
 import {withRouter} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {Form, Button} from 'react-bootstrap'
 
 
     const Reset =({history}) => {
@@ -25,33 +24,32 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
     
         return(
-        <div className="base" >
+        <div className="" >
             
-            <div className="imageLogo">
-            <img src={loginImg} alt="" className="loginImg"/>
-            </div>
+            <h1 className="text-center bg-primary" >The Show Room</h1>
 
-                <div className="content">
-
-                    <div className="imagePlaceholder">
-                        <img src={placeImg} alt="" className="placeImg" />
-                    </div>
+                <div className="row">
                         
-                    <form className="formDiv" onSubmit={handleResetPassword} >
+                    <Form style={{width:"60%",marginLeft:"10%",marginBottom:"5%",marginRight:"5%"}} className="col bg-cadetblue" onSubmit={handleResetPassword}>
 
-                    <img src={welcomeImg} alt="" className="imageWelcome"/>
+                    <h1 className="text-center">-Welcome-</h1>
 
-                            <label htmlFor="email" className="labelBox">Email:</label>
-                            <input type="email" name="email" required placeholder="example@gmail.com" className="inputBox"/>
+                            <Form.Label htmlFor="email" className="form">Email:</Form.Label>
+                            <Form.Control type="email" name="email" required placeholder="example@gmail.com" className=""/>
 
-                            <button type="submit" className="btnResetPassword">Reset Password</button>
+                            <br/>
 
-                            <Link to="/" className="btnLink">
-                                <button type="button" className="btnReturnLogin">Already have an account?</button>
+                            <Button type="submit" className="">Reset Password</Button>
+                            <br/>
+                            <br/>
+                            <Link to="/" className="">
+                                <Button type="button" className="bg-transparent border-0%">Already have an account? login</Button>
                             </Link>
-                    </form>
+                    </Form>
 
-
+                    <div className="col" style={{width:"70%",marginLeft:"5%",marginRight:"5%",marginBottom:"5%"}}>
+                        <img src={placeImg} alt="" className="rounded" />
+                    </div>
 
                 </div>
   

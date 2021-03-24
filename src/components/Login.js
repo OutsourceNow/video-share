@@ -6,6 +6,7 @@ import {AuthContext} from "../Auth"
 import {Link} from 'react-router-dom';
 import placeImg from "../Image.svg";
 
+
 const Login = ({history}) => {
     const handleLogin =useCallback(
         async event => {
@@ -33,28 +34,24 @@ const Login = ({history}) => {
             
         <div className=""> 
 
-
-        <h1 className="text-center">The Show Room</h1>
-
+   
+        <h1 className="text-center bg-primary" >The Show Room</h1>
+        
             <div className="row">
 
-                    <div className="col" style={{width:"60%", marginLeft:"20%"}}>
-                        <img src={placeImg} alt="" className="rounded" />
-                    </div>
 
+                    <Form style={{width:"60%",marginLeft:"10%",marginBottom:"5%",marginRight:"5%"}} className="col bg-cadetblue" onSubmit={handleLogin}>
 
-                    <Form style={{width:"80%", marginLeft:"10%", marginRight:"20%"}} className="col" onSubmit={handleLogin}>
-
-                        <h1 className="text-white">-Welcome-</h1>
+                        <h1 className="text-center">-Welcome-</h1>
 
                         <Form.Group className="form-group">
-                            <Form.Label for="email" >Email:</Form.Label>
-                            <Form.Control type="email" Name="email" required placeholder="example@gmail.com"/>
+                            <Form.Label htmlFor="email" >Email:</Form.Label>
+                            <Form.Control type="email" name="email" required placeholder="example@gmail.com" style={{width:"70%"}}/>
                         </Form.Group>
 
-                        <Form.Group class="form-group">
-                            <Form.Label for="password" >Password:</Form.Label>
-                            <Form.Control type="password" Name="password" required placeholder="password" />
+                        <Form.Group className="form-group">
+                            <Form.Label htmlFor="password" >Password:</Form.Label>
+                            <Form.Control type="password" name="password" required placeholder="password" style={{width:"70%"}} />
                         </Form.Group>
                     
                         <Button type="submit">login</Button>
@@ -66,16 +63,20 @@ const Login = ({history}) => {
                         <br/>
                         <br/>
                         <Link to="/Register">
-                            <Button type="button" className="">Don't have an account?Register</Button>
+                            <Button type="button" className="bg-transparent">Don't have an account?Register</Button>
                         </Link>
-
+                        <br/>
+                        <br/>
                     </Form>
-                    <br/>
-                    <br/>
-                </div>
+
+                    <div className="col" style={{width:"70%",marginLeft:"5%",marginRight:"5%",marginBottom:"5%"}}>
+                        <img src={placeImg} alt="" className="rounded" />
+                    </div>
+            </div>
 
         </div>
         );
 };
+
 
 export default withRouter(Login);

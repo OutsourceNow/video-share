@@ -8,17 +8,17 @@ import {Link} from "react-router-dom"
 const Home = () => {
 
     return (
-        <div className="container">
+        <div className="">
 
 
             
                 <Link to="/Home" >
-                    <img src={loginImg} alt="" className="loginImgHome"/>
+                    <img src={loginImg} alt="" className=""/>
                 </Link>
              
-            <img src={welcomeImg} alt="" className="imageWelcomeHome"/>
+            <img src={welcomeImg} alt="" className=""/>
 
-            <img src={placeholderHome} alt="" className="placeholderHome"/>
+            <img src={placeholderHome} alt="" className=""/>
 
             <h3 className="note">
                 This is simply a site under development,

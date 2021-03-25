@@ -35,12 +35,12 @@ const Login = ({history}) => {
         <div className=""> 
 
    
-        <h1 className="text-center bg-primary" >The Show Room</h1>
+        <h1 className="text-center bg-white" style={{width:"100%", height:"30%"}} >The Show Room</h1>
         
             <div className="row">
 
 
-                    <Form style={{width:"60%",marginLeft:"10%",marginBottom:"5%",marginRight:"5%"}} className="col bg-cadetblue" onSubmit={handleLogin}>
+                    <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"5%",marginRight:"5%"}} className="col bg-white" onSubmit={handleLogin}>
 
                         <h1 className="text-center">-Welcome-</h1>
 
@@ -63,7 +63,7 @@ const Login = ({history}) => {
                         <br/>
                         <br/>
                         <Link to="/Register">
-                            <Button type="button" className="bg-transparent">Don't have an account? Register</Button>
+                            <Button type="button" className="bg-transparent text-black">Don't have an account? Register</Button>
                         </Link>
                         <br/>
                         <br/>

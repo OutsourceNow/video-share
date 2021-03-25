@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 
-html{
+html,body{
     font-family: 'Rochester',cursive;
     background-color: rgb(9, 71, 73);
 }

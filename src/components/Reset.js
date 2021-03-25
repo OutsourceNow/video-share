@@ -30,8 +30,7 @@ import {Form, Button} from 'react-bootstrap'
 
                 <div className="row">
                         
-                    <Form style={{width:"60%",marginLeft:"10%",marginBottom:"5%",marginRight:"5%"}} className="col bg-cadetblue" onSubmit={handleResetPassword}>
-
+                <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"50%",marginRight:"5%"}} className="col bg-white rounded" onSubmit={handleResetPassword}>
                     <h1 className="text-center">-Welcome-</h1>
 
                             <Form.Label htmlFor="email" className="form">Email:</Form.Label>
@@ -43,11 +42,11 @@ import {Form, Button} from 'react-bootstrap'
                             <br/>
                             <br/>
                             <Link to="/" className="">
-                                <Button type="button" className="text-body bg-transparent border-0">Already have an account? login</Button>
+                                <Button type="button" className="text-body bg-transparent border-0 mx-auto d-block">Already have an account? login</Button>
                             </Link>
                     </Form>
 
-                    <div className="col" style={{width:"70%",marginLeft:"5%",marginRight:"5%",marginBottom:"5%"}}>
+                    <div className="col" style={{width:"60%",marginRight:"5%",marginBottom:"0%"}}>
                         <img src={placeImg} alt="" className="rounded" />
                     </div>
 

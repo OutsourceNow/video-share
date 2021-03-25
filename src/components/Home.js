@@ -1,33 +1,27 @@
 import React from 'react'
 import app from '../firebase'
-import loginImg from "../showroom.svg";
 import placeholderHome from "../placeholderHome.svg"
-import welcomeImg from "../welcome.svg";
-import {Link} from "react-router-dom"
+import {Link, Button} from 'react-bootstrap'
 
 const Home = () => {
 
     return (
         <div className="">
+               <h1 className="text-center text-white p-2" style={{width:"100%", height:"30%"}} >The Show Room</h1>
+            <div>
 
 
-            
-                <Link to="/Home" >
-                    <img src={loginImg} alt="" className=""/>
-                </Link>
-             
-            <img src={welcomeImg} alt="" className=""/>
+            <img src={placeholderHome} alt="" className="mx-auto d-block p-5"/>
 
-            <img src={placeholderHome} alt="" className=""/>
-
-            <h3 className="note">
+            <h3 className="text-center text-white  ">
                 This is simply a site under development,
                 stressful sometimes, but fun to learn.
                 Because a line of code per day, makes it 
                 work for me. Kudos!
             </h3>
 
-            <button className="signOut" onClick={() => app.auth().signOut()}>signOut</button>
+            <Button className="mx-auto d-block" onClick={() => app.auth().signOut()}>signOut</Button>
+            </div>
 
 
         </div>

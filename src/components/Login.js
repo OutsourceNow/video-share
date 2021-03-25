@@ -32,7 +32,7 @@ const Login = ({history}) => {
 
         return(
             
-        <div className=""> 
+        <div className="container"> 
 
    
         <h1 className="text-center text-white p-2" style={{width:"100%", height:"30%"}} >The Show Room</h1>
@@ -40,7 +40,7 @@ const Login = ({history}) => {
             <div className="row">
 
 
-                    <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"5%",marginRight:"5%"}} className="col bg-white rounded" onSubmit={handleLogin}>
+                    <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"50%",marginRight:"5%"}} className="col bg-white rounded" onSubmit={handleLogin}>
 
                         <h1 className="text-center">-Welcome-</h1>
 
@@ -63,13 +63,13 @@ const Login = ({history}) => {
                         <br/>
                         <br/>
                         <Link to="/Register">
-                            <Button type="button" className=" text-body bg-transparent border-0">Don't have an account? SignUp</Button>
+                            <Button type="button" className=" text-body bg-transparent border-0 mx-auto d-block">Don't have an account? SignUp</Button>
                         </Link>
                         <br/>
                         <br/>
                     </Form>
 
-                    <div className="col" style={{width:"60%",marginLeft:"5%",marginRight:"5%",marginBottom:"5%"}}>
+                    <div className="col" style={{width:"60%",marginRight:"5%",marginBottom:"0%"}}>
                         <img src={placeImg} alt="" className="rounded" />
                     </div>
             </div>

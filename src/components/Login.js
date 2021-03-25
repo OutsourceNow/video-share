@@ -63,13 +63,13 @@ const Login = ({history}) => {
                         <br/>
                         <br/>
                         <Link to="/Register">
-                            <Button type="button" className=" text-body bg-transparent border-0 mx-auto d-block">Don't have an account? SignUp</Button>
+                            <Button type="button" className=" text-body bg-transparent border-0 d-block">Don't have an account? SignUp</Button>
                         </Link>
                         <br/>
                         <br/>
                     </Form>
 
-                    <div className="col" style={{width:"60%",marginRight:"5%",marginBottom:"0%"}}>
+                    <div className="col mx-auto" style={{width:"60%",marginRight:"5%",marginBottom:"0%"}}>
                         <img src={placeImg} alt="" className="rounded" />
                     </div>
             </div>

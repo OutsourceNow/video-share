@@ -30,7 +30,7 @@ const Register =({history}) => {
 
             <h1 className="text-center text-white p-2" style={{width:"100%", height:"30%"}} >The Show Room</h1>
 
-                <div className="row">
+                <div className="row mx-auto">
 
                     
                 <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"50%",marginRight:"5%"}} className="col bg-white rounded" onSubmit={handleSignUp}>
@@ -50,7 +50,7 @@ const Register =({history}) => {
                                 <Button type="button" className="text-body bg-transparent border-0 mx-auto d-block">Already a User? Login</Button>
                             </Link>
                     </Form>
-                    <div className="col" style={{width:"60%",marginRight:"5%",marginBottom:"0%"}}>
+                    <div className="col mx-auto" style={{width:"60%",marginRight:"5%",marginBottom:"0%"}}>
                         <img src={placeImg} alt="" className="rounded" />
                     </div>
                 </div>

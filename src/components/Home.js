@@ -6,7 +6,7 @@ import {Link, Button} from 'react-bootstrap'
 const Home = () => {
 
     return (
-        <div className="">
+        <div className="container">
                <h1 className="text-center text-white p-2" style={{width:"100%", height:"30%"}} >The Show Room</h1>
             <div>
 

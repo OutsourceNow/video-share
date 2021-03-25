@@ -30,7 +30,7 @@ import {Form, Button} from 'react-bootstrap'
 
                 <div className="row">
                         
-                <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"50%",marginRight:"5%"}} className="col bg-white rounded" onSubmit={handleResetPassword}>
+                <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"50%"}} className="col bg-white rounded" onSubmit={handleResetPassword}>
                     <h1 className="text-center">-Welcome-</h1>
 
                             <Form.Label htmlFor="email" className="form">Email:</Form.Label>

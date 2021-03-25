@@ -40,7 +40,7 @@ const Login = ({history}) => {
             <div className="row">
 
 
-                    <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"50%",marginRight:"5%"}} className="col bg-white rounded" onSubmit={handleLogin}>
+                    <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"50%",marginRight:"10%"}} className="col bg-white rounded" onSubmit={handleLogin}>
 
                         <h1 className="text-center">-Welcome-</h1>
 
@@ -63,7 +63,7 @@ const Login = ({history}) => {
                         <br/>
                         <br/>
                         <Link to="/Register">
-                            <Button type="button" className=" text-body bg-transparent border-0 d-block">Don't have an account? SignUp</Button>
+                            <Button type="button" className=" text-body bg-transparent border-0 mx-auto d-block">Don't have an account? SignUp</Button>
                         </Link>
                         <br/>
                         <br/>

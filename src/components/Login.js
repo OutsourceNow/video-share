@@ -35,23 +35,23 @@ const Login = ({history}) => {
         <div className=""> 
 
    
-        <h1 className="text-center bg-white" style={{width:"100%", height:"30%"}} >The Show Room</h1>
+        <h1 className="text-center text-white p-2" style={{width:"100%", height:"30%"}} >The Show Room</h1>
         
             <div className="row">
 
 
-                    <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"5%",marginRight:"5%"}} className="col bg-white" onSubmit={handleLogin}>
+                    <Form style={{width:"60%",height:"auto",marginLeft:"10%",marginBottom:"5%",marginRight:"5%"}} className="col bg-white rounded" onSubmit={handleLogin}>
 
                         <h1 className="text-center">-Welcome-</h1>
 
                         <Form.Group className="form-group">
                             <Form.Label htmlFor="email" >Email:</Form.Label>
-                            <Form.Control type="email" name="email" required placeholder="example@gmail.com" style={{width:"70%"}}/>
+                            <Form.Control type="email" name="email" required placeholder="example@gmail.com" style={{width:"90%"}}/>
                         </Form.Group>
 
                         <Form.Group className="form-group">
                             <Form.Label htmlFor="password" >Password:</Form.Label>
-                            <Form.Control type="password" name="password" required placeholder="password" style={{width:"70%"}} />
+                            <Form.Control type="password" name="password" required placeholder="password" style={{width:"90%"}} />
                         </Form.Group>
                     
                         <Button type="submit">login</Button>
@@ -63,13 +63,13 @@ const Login = ({history}) => {
                         <br/>
                         <br/>
                         <Link to="/Register">
-                            <Button type="button" className="bg-transparent text-black">Don't have an account? Register</Button>
+                            <Button type="button" className=" text-body bg-transparent border-0">Don't have an account? SignUp</Button>
                         </Link>
                         <br/>
                         <br/>
                     </Form>
 
-                    <div className="col" style={{width:"70%",marginLeft:"5%",marginRight:"5%",marginBottom:"5%"}}>
+                    <div className="col" style={{width:"60%",marginLeft:"5%",marginRight:"5%",marginBottom:"5%"}}>
                         <img src={placeImg} alt="" className="rounded" />
                     </div>
             </div>

@@ -26,7 +26,7 @@ import {Form, Button} from 'react-bootstrap'
         return(
         <div className="" >
             
-            <h1 className="text-center bg-primary" >The Show Room</h1>
+            <h1 className="text-center text-white p-2" style={{width:"100%", height:"30%"}} >The Show Room</h1>
 
                 <div className="row">
                         
@@ -35,7 +35,7 @@ import {Form, Button} from 'react-bootstrap'
                     <h1 className="text-center">-Welcome-</h1>
 
                             <Form.Label htmlFor="email" className="form">Email:</Form.Label>
-                            <Form.Control type="email" name="email" required placeholder="example@gmail.com" className=""/>
+                            <Form.Control type="email" name="email" required placeholder="example@gmail.com" className="" style={{width:"80%"}}/>
 
                             <br/>
 
@@ -43,7 +43,7 @@ import {Form, Button} from 'react-bootstrap'
                             <br/>
                             <br/>
                             <Link to="/" className="">
-                                <Button type="button" className="bg-transparent border-0%">Already have an account? login</Button>
+                                <Button type="button" className="text-body bg-transparent border-0">Already have an account? login</Button>
                             </Link>
                     </Form>
 

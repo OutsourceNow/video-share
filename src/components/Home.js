@@ -1,7 +1,7 @@
 import React from 'react'
 import app from '../firebase'
 import placeholderHome from "../placeholderHome.svg"
-import {Link, Button} from 'react-bootstrap'
+import {Button} from 'react-bootstrap'
 
 const Home = () => {
 

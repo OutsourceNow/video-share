@@ -2,6 +2,7 @@ import React from 'react'
 import app from '../firebase'
 import placeholderHome from "../placeholderHome.svg"
 import {Button} from 'react-bootstrap'
+import {Link} from 'react-router-dom';
 
 const Home = () => {
 
@@ -21,6 +22,13 @@ const Home = () => {
             </h3>
 
             <Button className="mx-auto d-block" onClick={() => app.auth().signOut()}>signOut</Button>
+            <br/>
+            <br/>
+
+            <Link to="/Employee" className="">
+                <Button type="button" className="mx-auto d-block">Employee</Button>
+            </Link>
+
             </div>
 
 

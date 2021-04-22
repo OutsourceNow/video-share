@@ -6,12 +6,18 @@ import {AuthContext} from "../Auth"
 import {Link} from 'react-router-dom';
 import placeImg from "../Image.svg";
 
-
 const Login = ({history}) => {
     const handleLogin =useCallback(
         async event => {
             event.preventDefault();
             const {email, password} = event.target.elements;
+
+            // const employee = {
+            //     name: name.value,
+            //     age: age.value
+            // }
+
+            // e.push(employee);
             try {
                 await app
                 .auth()

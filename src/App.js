@@ -8,6 +8,9 @@ import Home from './components/Home'
 import Employee from './components/Employee'
 import { AuthProvider } from "./Auth"
 import PrivateRoute from "./PrivateRoute"
+import List from './components/List';
+import EditUser from './components/EditUser';
+import EmployeeCharts from './components/EmployeeCharts';
 
 
 function App() {
@@ -21,6 +24,9 @@ function App() {
               <Route exact path="/" component={Login} />
               <Route exact path="/Register" component={Register} />
               <Route exact path="/Reset" component={Reset} />
+              <Route exact path="/List"  component={List} />
+              <Route exact path="/EditUser/:_id" component={EditUser}/>
+              <Route exact path="/EmployeeCharts" component={EmployeeCharts}/>
             </Switch>
           </div>
         </Router>

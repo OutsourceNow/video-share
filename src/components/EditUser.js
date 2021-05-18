@@ -1,14 +1,18 @@
 //import { render } from '@testing-library/react';
 import { React, useCallback, useState,useEffect } from 'react';
 import { Form } from 'react-bootstrap';
-import {Link, useHistory} from 'react-router-dom';
+import {Link, useHistory, useParams} from 'react-router-dom';
 import axios from 'axios';
+import { getAllByTestId } from '@testing-library/react';
 
 
 
 
 //Sets Employees
-const Employee = () => {
+const EditUser = () => {
+    console.log({})
+    const {_id} = useParams();
+    console.log(_id)
     const history = useHistory();
     const [employees, setEmployees] = useState([]);
     const [employee, setEmployee] = useState({
@@ -20,16 +24,17 @@ const Employee = () => {
 
 
 //Finding the right index and applying change upon adding
-    // const [index2, setIndex] = useState(-1);
-    useEffect(() => {
-        axios.get(`http://localhost:4000/employee/employees`)
-            .then(res => {
-                console.log(res)
-                const info = res.data;
-                setEmployees(info)
-                console.log(info)
-            })
-    }, []);
+    const [index2, setIndex] = useState(-1);
+
+        useEffect(() => {
+            console.log('yyyyy',_id)
+            axios.get(`http://localhost:4000/employee/employee/${_id}`)
+                .then(res => {
+                    const info = res.data;
+                    setEmployee(info)
+                })
+        }, []);
+
 
 //Detecting Error Upon Change
     const onFirstNameChange = (event) => {
@@ -67,48 +72,63 @@ const Employee = () => {
     }
 
 
+
+
+    // // Delete Function
+    // function deleteEmployee(msg, index) {
+    //     console.log(msg);
+    //     let tempEmployees = [...employees];
+    //     axios.delete('http://localhost:4000/employee/' + msg)
+    //         .then(res => {
+    //             console.log(res)
+    //             tempEmployees.splice(index, 1);
+
+    //             // e.push(employee)
+    //             setEmployees(tempEmployees);
+    //         });
+    // }
+
+    //Edit
+    // function updateEmployee(data, index) {
+    //     console.log(data)
+    //     setIndex(index);
+    //     setEmployee(data)
+    // }
+
     //Handles Data from the form to Mongoose 
     let e = [];
     console.log(e);
     const handleSubmit = useCallback(
         async event => {
-            event.preventDefault();
             let tempEmployees = [...employees];
-
-            try {
-                if (!employee._id) {
-                    const { firstName, lastName, age, email } = event.target.elements;
-                    const employee = {
-                        firstName: firstName.value,
-                        lastName: lastName.value,
-                        age: age.value,
-                        email: email.value
-                    };
-
-                    console.log(employee);
-
-                    axios.post(`http://localhost:4000/employee/create`, employee)
-                        .then(res => {
-                            console.log(res)
-                            tempEmployees.push(res.data.employee);
-                            setEmployees(tempEmployees)
-                            history.push("/List")
-
-                            })
-                    } else {
-                        console.log(employee);
+            event.preventDefault();
                         axios.put(`http://localhost:4000/employee`, employee)
                             .then(res => {
                                 console.log(res)
+                                tempEmployees[index2] = employee;
                                 setEmployees(tempEmployees)
                                 history.push("/List")
 
                             })
                 }
-
-            } catch (e) { }
-        }
     )
+
+
+    //Data from the form being displayed plus edit and delete
+    // const renderRows = (employee, index) => {
+    //     return (
+    //         <tr key={index}>
+    //             <td>{employee.firstName}</td>
+    //             <td>{employee.lastName}</td>
+    //             <td>{employee.age}</td>
+    //             <td>{employee.email}</td>
+    //             <td>
+    //                 <button onClick={() => updateEmployee(employee, index)} style={{marginRight:"5px"}}><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></button>
+    //                 <button onClick={() => deleteEmployee(employee._id, index)}><i class="fa fa-trash fa-lg" aria-hidden="true"></i></button>
+    //             </td>
+    //         </tr>
+    //     )
+    // }
 
 
     return (
@@ -137,12 +157,13 @@ const Employee = () => {
                     <Form.Control type="email" name="email" required placeholder="example@111.com" className="" value={employee.email} style={{ width: "80%" }} onChange={onEmailChange}/>
 
 
-                    <button type="submit" className="btn btn-info" style={{margin:"5px 0px 5px 0px"}} ><i className="fa fa-database"></i> Submit</button>
+                    <button type="submit" className="btn btn-info" style={{margin:"5px 0px 5px 0px"}} ><i class="fa fa-database"></i> Submit</button>
                     <Link to="/List">
                     <button className="btn btn-info" style={{marginLeft:"5px"}}>View List</button>
                     </Link>
 
                 </Form>
+
             </div>
 
 
@@ -150,4 +171,4 @@ const Employee = () => {
     )
 
 }
-export default Employee
+export default EditUser
